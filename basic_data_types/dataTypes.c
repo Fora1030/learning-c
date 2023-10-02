@@ -51,7 +51,7 @@ int main ()
     sumResult = (x + y);
     result = charType(1);
     printf("result = %c\n", result);
-    printf("float + double result = %d", sumResult);
+    printf("float + double result = %lf", sumResult);
     // for some reason the result of the sum is not printed, 
     // I think might be the way that i am passing and assigning variables
     // the next chapter will cover variables and assignments 
