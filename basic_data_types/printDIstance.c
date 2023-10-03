@@ -13,11 +13,11 @@ int main (void)
     return 0;
 }
 
-void printDistance(double f)
+void printDistance(double feet)
 {
-    printf("The distance in feet is %5.3g\n", f);
+    printf("The distance in feet is %5.3g\n", feet);
 
-    double yard_distance = f / 3.0;
+    double yard_distance = feet / 3.0;
 
     printf("The distance in feet is %5.3g\n", yard_distance);
 
