@@ -6,11 +6,14 @@ int sumWhileLoop(int N);
 
 int sumForLoop(int N);
 
+int sumDoWhile(int N);
+
 int main(void) 
 {   
     printf("Rresult of adding 100 = %d using Gauss method\n", sumNviaGauss(100));
     printf("Rresult of adding 100 = %d using while loop\n", sumWhileLoop(100));
     printf("Rresult of adding 100 = %d using for loop\n", sumForLoop(100));
+    printf("Rresult of adding 100 = %d using do While\n", sumDoWhile(100));
     return 0;
 }
 
@@ -44,6 +47,20 @@ int sumForLoop(int N)
     {
         sum += (num + 1);
     }
+
+    return sum;
+}
+
+int sumDoWhile(int N)
+{
+    int sum = 0; 
+    int num = 0;
+
+    do 
+    {
+        sum += (num + 1);
+        num++;
+    } while (num < N);
 
     return sum;
 }
