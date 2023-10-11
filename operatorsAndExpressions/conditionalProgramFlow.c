@@ -39,17 +39,17 @@ void usingSwitch(void)
     scanf("%d", &response);
     switch (response)
     {
-    case 1:
-        printf("Hello world\n");
-        break;
-    
-    case 2:
-        printf("enter your name: ");
-        char user_name;
-        scanf("%c", &user_name);
-        printf("\n%c! Thanks for testing this program! ", user_name);
-    default:
-        break;
+        case 1:
+            printf("Hello world\n");
+            break;
+        
+        case 2:
+            printf("enter your name: ");
+            char user_name;
+            scanf("%c", &user_name);
+            printf("\n%c! Thanks for testing this program! ", user_name);
+        default:
+            break;
     }
 
 }
