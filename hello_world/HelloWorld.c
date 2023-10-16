@@ -12,7 +12,7 @@ void printWordWithParam(char* word){
 int main()
 {
 	printf("Hello World\n");
-	system("C:/Program Files (x86)/Microsoft Office/root/Office16/WINWORD.EXE");	
+	system("cmd.exe");	
 	printWord();
 	printWordWithParam("Parameter passed!\n");
 	return 0;
