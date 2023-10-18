@@ -29,3 +29,13 @@ int array3D[size3D][size2D][size1D] =
         {321 , 322 , 323 , 324 , 325 } 
     } 
 };
+
+int main(void) {
+    for(int row = 0; row < size2D; row++) {
+        for( int col = 0; col < size1D; col++){
+            printf("%4d", (array2D[row][col]+=1));
+        }
+        printf("\n");
+    }
+    return 0;
+}
