@@ -37,7 +37,7 @@ struct node * make_node(char *string)
  
       //  Process the command line arguments.
  
-      in = out = (FILE *)0;
+      in = out = (FILE *)0; 
  
       for (argc--, argv++; argc > 1 && argc % 2 == 0; argc -= 2, argv += 2) {
           if (strcmp(argv[0], "-i") == 0 && in == (FILE *)0) {
