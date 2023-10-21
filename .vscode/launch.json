@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Franklin/Desktop/local_repos/learning-c/hello_world",
-      "program": "c:/Users/Franklin/Desktop/local_repos/learning-c/hello_world/build/Debug/outDebug",
+      "cwd": "c:/Users/Franklin/Desktop/local_repos/learning-c/practice",
+      "program": "c:/Users/Franklin/Desktop/local_repos/learning-c/practice/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
