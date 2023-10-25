@@ -37,8 +37,10 @@ int main(void)
     weight = 30;
     printf("%i after assigning value to variable\n",*pMeasurement);
     printf("pointer address: %p\n",*pMeasurement);
-
     voidPointers();
+
+    // pointers as variable function arguments
+    
     return 0;
 }
 
