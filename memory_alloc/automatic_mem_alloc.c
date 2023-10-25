@@ -22,5 +22,8 @@ double doSomething(double x, double y)
             printf("local value: %f\n", d2);
         }
     }
+    // variables i and j are destroy after the iteration of the for loop is complete
+    // printf("variables local to the for loops i {%i}, j {%i}",i,j);
+
     return d2;
 }
