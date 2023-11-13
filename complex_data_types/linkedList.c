@@ -5,11 +5,6 @@
 
 
 
-int main(void){
-    // CreateLinkedList();
-    printf("Compiled successfully");
-    return 0;
-}
 void OutOfStorage(void){
     fprintf(stderr, "## FATAL RUNTIME ERROR ## NO MEMORY AVAILABLE");
     exit(EXIT_FAILURE);
@@ -129,4 +124,56 @@ void PrintList(LinkedList* pList, void(*printData)(ListData* pData)) {
 void PrintNode(ListNode* pNode, void(*printData)(ListData* pData)) {
     printData(pNode->pData);
 
+}
+
+// Using the linked list
+void PrintInt(int* i) {
+    printf("%2d ", *i);
+}
+
+ListData* CreateData(ListData d){
+    ListData* pD = (ListData*)calloc(1, sizeof(ListData));
+    if (pD == NULL) OutOfStorage();
+    *pD = d;
+    return pD;
+}
+
+typedef enum {
+    eFront = 0,
+    eBack
+} eWhere;
+
+typedef enum {
+    eLook = 0,
+    eInsert, 
+    eDelete
+} eAction;
+
+
+void TestCreateNode(LinkedList* pLL, ListData data, eWhere where){
+    ListData* pData = CreateData(data);
+    ListNode* pNode = CreateNode(pData);
+
+    switch(where){
+        case eFront: InsertNodeToFront(pLL, pNode);break;
+        case eBack: InsertNodeToBack(pLL, pNode);break;
+    }
+    PrintList(pLL, PrintInt);
+}
+
+void TestPrintOperation(LinkedList* pLL, eAction action, ListData data, eWhere where){
+
+    printf("testing");
+}
+int main(void){
+    // CreateLinkedList();
+    LinkedList* pLL = CreateLinkedList();
+    PrintList(pLL, PrintInt);
+    int data1[] = {1, 2, 3, 4};
+    for (int i = 0; i <4;i++) {
+        TestCreateNode(pLL, data1[i], eFront);
+    }
+    printf("Compiled successfully");
+    free(pLL);
+    return 0;
 }
