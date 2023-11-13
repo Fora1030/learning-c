@@ -33,11 +33,16 @@ ListNode* GetNode(LinkedList* pList, int pos);
 
 ListNode* CreateNode(ListData* pData);
 
+// ----------- next functions to be added to the linked list---
+// ListNode* InsertNodeAt(LinkedList* pList, ListNode pNode);
+// ListNode* RemoveNodeAt(LinkedList* pList, ListNode pNode);
+// void SortList(LinkedList* pList, eSortOrder order);
+// void ConcatenateList(LinkedList* pList1, LinkedList* pList2);
 void DeleteNode(ListNode* pNode);
 
 void PrintList(LinkedList* pList, void (*printData)(ListData* pData));
 
-void PrintList(ListNode* pNode, void (*printData)(ListData* pData));
+void PrintNode(ListNode* pNode, void (*printData)(ListData* pData));
 
 void OutOfStorage(void);
 

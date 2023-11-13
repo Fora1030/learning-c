@@ -14,6 +14,7 @@ int main(void)
 
     for(int i =0; i < 5; i++)
     {
+       // the use of & before the variable returns the location in the memory for that object
         printf("&(array[%1d]) = %p, array[%1d] = %1d, i++\n", i, &(array[i]),i,array[i]);
     }
 
