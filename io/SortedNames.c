@@ -5,13 +5,13 @@
 enum {
     kListMax = 100,
     kStringMax = 80
-}
+};
 
 typedef char string [kStringMax];
 
 void addName(string* names, string newOne, int* listSize);
 
-void printNames(string* names, int* listSize);
+void printNames(string* names, int listSize);
 
 void removeNewline(string s){
     int len = strlen(s);
@@ -46,9 +46,9 @@ int main(void) {
         removeNewline(newName),
         strlen(newName) > 0
     ) {
-        addName(nameList, newName &numNames);
+        addName(nameList, newName, &numNames);
     }
-    printNames(nameList, numNames)
+    printNames(nameList, numNames);
     return 0;
 }
 
@@ -61,6 +61,7 @@ void addName(string* names, string newName, int* pNumEntries) {
         bool found = false;
         while (!found && k < *pNumEntries) {
             found = (strcmp(newName, names[k++]) < 0);
+            printf("%d\n",strcmp(newName, names[k]));
         }
 
         if(found) {
@@ -74,4 +75,12 @@ void addName(string* names, string newName, int* pNumEntries) {
         (*pNumEntries)++;
     }
     return;
+}
+
+void printNames(string *names, int numEntries) {
+    printf("\nNumber of entries: %d\n\n", numEntries);
+    for(int i = 0; i < numEntries; i++) {
+        fputs(names[i], stdout);
+        fputc('\n', stdout);
+    }
 }
