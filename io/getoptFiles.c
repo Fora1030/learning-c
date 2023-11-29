@@ -16,3 +16,14 @@ void usage(char* cmd){
     );
     exit(EXIT_SUCCESS);
 }
+
+int main(int argc, char *argv[]){
+    int ch;
+    FILE* inputFile = NULL;
+    FILE* outputFile = NULL;
+
+    while((ch = getopt(argc, argv, "i:o:z:h?")) != -1){
+        printf("argument [%c]", ch);
+        printf(" value [%s]\n", optarg);
+    }
+}
